@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+# Segundo projeto para a pratica de react:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Explicação do projeto:
 
-## Available Scripts
+Neste projeto, começaremos a aplicar eventos e a utilizar `estados` com React.
 
-In the project directory, you can run:
+Nele você irá criar uma lista de tarefas simples, mas que ajudará a deixar mais claro esses novos conceitos do react.
 
-### `yarn start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Objetivos:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Aplicar eventos em react.
+- Entender o que é um estado e como aplicar em nossos projetos.
 
-### `yarn test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Requisitos:
 
-### `yarn build`
+### 1: Crie um estado para armazenar as tarefas:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Crie um estado que será responsavel por armazenar as tarefas.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+para facilitar o desenvolvimento, cada tarefa deve ser armazenada em um objeto com o seguinte formato:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```js
+{
+    id: "deve ser um numero aleatorio",
+    title: "Texto da tarefa",
+    isCompleted: "estado atual da tarefa"
+}
+```
 
-### `yarn eject`
+```js
+{
+    id: 032133123,
+    title: "Farofa é melhor que tutu",
+    isCompleted: false,
+}
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 2: Crie um estado para armazenar o texto que será inserido na tarefa:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Assim como no desafio anterior, usaremos um estado para armazenar o texto que será inserido, pois isso irá facilitar a manipulação do mesmo.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+obs: o texto deve ser salvo em formato de string.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 3: Crie a função que será responsavel por alterar o estado do texto:
 
-## Learn More
+Neste desafio, você deve criar uma função para inserir no estado do texto o que o usuario inserir no campo de input.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Dica: É possivel utilizarmos o evento `onChange` para inserirmos cada caractere digitado pelo usuario no estado.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 4: Crie a função responsavel por inserir uma nova tarefa no estado de tasks:
 
-### Code Splitting
+Agora que você já consegue salvar o texto que precisa inserir na task, crie uma função que será responsavel por criar uma nova task com a estrutura que definimos acima e a insira no nosso estado de `tasks`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 5: Renderize as novas tarefas dentro da ul:
 
-### Analyzing the Bundle Size
+Estamos cada vez mais perto do fim deste projeto, para vermos nosso progresso, agora iremos inserir as novas tarefas dentro da ul, para isso utilize a sintaxe já aprendida no bloco 11 do course e insira os novos elementos na lista.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 6: Marque uma tarefa como completa:
 
-### Making a Progressive Web App
+Agora que já temos novos elementos sendo inseridos na nossa lista, precisamos permitir que o usuario possa marcar as tarefas como concluidas.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+> A estilização para isso já está criada com a classe `isCompleted`
 
-### Advanced Configuration
+Então precisaremos criar uma função para alterarmos a chave `isCompleted` que estamos salvando dentro do nosso objeto de tarefa.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Dica: Para inserir a classe com mais facilidade, é possivel utilizarmos o operador ternario. 
 
-### Deployment
+Dica 2: Para alterar a chave é necessario alterar todo o estado responsavel pelas tarefas.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Dica 2.2: HOFs são suas melhores amigas.
 
-### `yarn build` fails to minify
+## 7: Deletando uma tarefa:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Para finalizarmos o projeto, é necessario que possamos deletar alguma tarefa que já foi inserida.
+
+Então assim como no desafio anterior, crie uma função para que seja possivel deletar alguma tarefa já existente.
+
+---
+
+## Bônus:
+
+## Salve sua lista de tarefas em localStorage:
+
+Implemente uma função que permita que sua lista de tarefas seja salva em `localStorage`.
+
+Não se esqueça que a lista deve ser salva quando você insere um elemento e quando você remove.
+
+
+
+
