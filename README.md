@@ -83,12 +83,6 @@ Então assim como no desafio anterior, crie uma função para que seja possivel 
 
 ## Bônus:
 
-## Salve sua lista de tarefas em localStorage:
-
-Implemente uma função que permita que sua lista de tarefas seja salva em `localStorage`.
-
-Não se esqueça que a lista deve ser salva quando você insere um elemento e quando você remove.
-
 ## Permita que o usuario use a tecla enter para inserir uma nova tarefa:
 
 Para melhorar a experiencia do usuario, é recomendado que seja possivel apertar a tecla `enter` depois de digitar o texto desejado.
